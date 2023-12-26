@@ -1,9 +1,9 @@
 export const navOptions = [
-  {
-    id: "home",
-    label: "Home",
-    path: "/",
-  },
+  // {
+  //   id: "home",
+  //   label: "Home",
+  //   path: "/",
+  // },
   {
     id: "listing",
     label: "All Products",
@@ -21,7 +21,7 @@ export const navOptions = [
   },
   {
     id: "listingKids",
-    label: "kids",
+    label: "Kids",
     path: "/product/listing/kids",
   },
 ];
@@ -189,17 +189,16 @@ export const AvailableSizes = [
 ];
 
 export const firebaseConfig = {
-  apiKey: "API_KEY",
-  authDomain: "AUTH_DOMAIN",
-  projectId: "PROJECT_ID",
-  storageBucket: "STROAGE_BUCKET",
-  messagingSenderId: "MESSAGING_SENDER_ID",
-  appId: "APP_ID",
-  measurementId: "MEASUREMENT_ID",
+  apiKey: "AIzaSyA0u_Q2sFZ7IvYqKGlQl4w76PTL_dKubIc",
+  authDomain: "oasis-ecom.firebaseapp.com",
+  projectId: "oasis-ecom",
+  storageBucket: "oasis-ecom.appspot.com",
+  messagingSenderId: "14440579218",
+  appId: "1:14440579218:web:eb189120d3b682cbd1e64b",
+  measurementId: "G-VZQB4D541H",
 };
 
-export const firebaseStroageURL =
-  "YOUR_FIREBASE_STROAGE_URL";
+export const firebaseStroageURL = "gs://oasis-ecom.appspot.com/";
 
 export const addNewAddressFormControls = [
   {

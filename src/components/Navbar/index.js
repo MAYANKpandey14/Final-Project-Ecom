@@ -33,7 +33,7 @@ function NavItems({ isModalView = false, isAdminView, router }) {
             ))
           : navOptions.map((item) => (
               <li
-                className="cursor-pointer block py-2 pl-3 pr-4 text-gray-900 rounded md:p-0"
+                className="cursor-pointer block py-2 pl-3 pr-4 text-gray-900 rounded md:p-0 hover:font-bold duration-300 ease-in-out"
                 key={item.id}
                 onClick={() => router.push(item.path)}
               >
@@ -89,8 +89,8 @@ export default function Navbar() {
             onClick={() => router.push("/")}
             className="flex items-center cursor-pointer"
           >
-            <span className="slef-center text-2xl font-semibold whitespace-nowrap">
-              Ecommercery
+            <span className="text-black italic self-center text-3xl font-bold whitespace-nowrap select-none">
+              Oasis
             </span>
           </div>
           <div className="flex md:order-2 gap-2">
@@ -98,7 +98,7 @@ export default function Navbar() {
               <Fragment>
                 <button
                   className={
-                    "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium upprcase tracking-wide text-white"
+                    " mt-1.5 border-2 border-black inline-block bg-black px-4 py-2 text-sm font-medium rounded-md tracking-wide text-white  hover:text-black hover:bg-white duration-300 ease-in-out"
                   }
                   onClick={()=>router.push('/account')}
                 >
@@ -106,7 +106,7 @@ export default function Navbar() {
                 </button>
                 <button
                   className={
-                    "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium upprcase tracking-wide text-white"
+                    "  mt-1.5 border-2 border-black inline-block bg-black px-4 py-2 text-sm font-medium rounded-md tracking-wide text-white  hover:text-black hover:bg-white duration-300 ease-in-out"
                   }
                   onClick={()=> setShowCartModal(true)}
                 >
@@ -118,7 +118,7 @@ export default function Navbar() {
               isAdminView ? (
                 <button
                   className={
-                    "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium upprcase tracking-wide text-white"
+                    " mt-1.5 border-2 border-black inline-block bg-black px-4 py-2 text-sm font-medium rounded-md tracking-wide text-white  hover:text-black hover:bg-white duration-300 ease-in-out"
                   }
                   onClick={() => router.push("/")}
                 >
@@ -128,7 +128,7 @@ export default function Navbar() {
                 <button
                   onClick={() => router.push("/admin-view")}
                   className={
-                    "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium upprcase tracking-wide text-white"
+                    " mt-1.5 border-2 border-black inline-block bg-black px-4 py-2 text-sm font-medium rounded-md tracking-wide text-white  hover:text-black hover:bg-white duration-300 ease-in-out"
                   }
                 >
                   Admin View
@@ -139,7 +139,7 @@ export default function Navbar() {
               <button
                 onClick={handleLogout}
                 className={
-                  "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium upprcase tracking-wide text-white"
+                  " mt-1.5 border-2 border-black inline-block bg-black px-4 py-2 text-sm font-medium rounded-md tracking-wide text-white  hover:text-black hover:bg-white duration-300 ease-in-out"
                 }
               >
                 Logout
@@ -148,7 +148,7 @@ export default function Navbar() {
               <button
                 onClick={() => router.push("/login")}
                 className={
-                  "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium upprcase tracking-wide text-white"
+                  " mt-1.5 border-2 border-black inline-block bg-black px-4 py-2 text-sm font-medium rounded-md tracking-wide text-white  hover:text-black hover:bg-white duration-300 ease-in-out"
                 }
               >
                 Login
@@ -171,9 +171,9 @@ export default function Navbar() {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                 ></path>
               </svg>
             </button>

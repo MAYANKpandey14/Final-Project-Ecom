@@ -69,11 +69,11 @@ export default function Orders() {
                     {allOrdersForUser.map((item) => (
                       <li
                         key={item._id}
-                        className="bg-gray-200 shadow p-5 flex flex-col space-y-3 py-6 text-left"
+                        className="bg-gray-100 drop-shadow-lg rounded-md p-5 flex flex-col space-y-3 py-6 text-left"
                       >
                         <div className="flex">
-                          <h1 className="font-bold text-lg mb-3 flex-1">
-                            #order: {item._id}
+                          <h1 className="text-lg mb-3 flex-1">
+                            Order ID: <span className="font-semibold text-md">{item._id}</span>
                           </h1>
                           <div className="flex items-center">
                             <p className="mr-3 text-sm font-medium text-gray-900">
@@ -99,15 +99,15 @@ export default function Orders() {
                             </div>
                           ))}
                         </div>
-                        <div className="flex gap-5">
-                          <button className="disabled:opacity-50 mt-5 mr-5  inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide">
+                        <div className="flex gap-1">
+                          <p className="disabled:opacity-50 mt-5 mr-5  inline-block px-5 py-3 text-md font-medium rounded-md tracking-wide">
                             {item.isProcessing
-                              ? "Order is Processing"
-                              : "Order is delivered"}
-                          </button>
+                              ? "Order is Processing...."
+                              : "Order is delivered !"}
+                          </p>
                           <button
                             onClick={() => router.push(`/orders/${item._id}`)}
-                            className=" mt-5 mr-5  inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide"
+                            className=" mt-5 mr-5  inline-block bg-black text-white px-5 py-3 text-sm font-medium rounded-md tracking-wide hover:bg-white hover:text-black ease-in-out duration-300 border-2 border-black"
                           >
                             View Order Details
                           </button>

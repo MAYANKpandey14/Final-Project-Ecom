@@ -9,13 +9,20 @@ export default function CommonCart({
   componentLevelLoader,
 }) {
 
+  const dynamicBottomMargin=(l)=>{
+    l=cartItems.length;
+    let m = l*50;
+    return m;
+  }
+
+
   const router = useRouter()
 
   return (
-    <section className="h-screen bg-gray-100">
+    <section className=" bg-gray-100">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto mt-8 max-w-screen-xl px-4 sm:px-6 lg:px-8">
-          <div className="bg-white shadow">
+        <div className="mx-auto my-16 max-w-screen-xl px-4 sm:px-6 lg:px-8">
+          <div className="rounded-md bg-white shadow-lg">
             <div className="px-4 py-6 sm:px-8 sm:py-10">
               <div className="flow-root">
                 {cartItems && cartItems.length ? (
@@ -33,7 +40,7 @@ export default function CommonCart({
                               cartItem.productID.imageUrl
                             }
                             alt="Product image"
-                            className="h-24 w-25 max-w-full rounded-lg object-cover"
+                            className="h-16 w-16 max-w-fit rounded-lg object-cover"
                           />
                         </div>
                         <div className="flex flex-1 flex-col justify-between">
@@ -113,11 +120,11 @@ export default function CommonCart({
                       : "0"}
                   </p>
                 </div>
-                <div className="mt-5 text-center">
+                <div className="mt-5 grid place-items-center">
                   <button
                   onClick={()=>router.push('/checkout')}
                     disabled={cartItems && cartItems.length === 0}
-                    className="disabled:opacity-50 group inline-flex w-full items-center justify-center bg-black px-6 py-4 text-lg text-white font-medium uppercase tracking-wide"
+                    className="disabled:opacity-50 group flex w-fit items-center justify-center bg-black px-4 py-2 rounded-md text-md text-white font-medium tracking-wide hover:bg-white hover:text-black border-2 border-black ease-in-out duration-300"
                   >
                     Checkout
                   </button>

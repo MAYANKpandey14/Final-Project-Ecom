@@ -20,6 +20,7 @@ body {
   color: rgb(var(--foreground-rgb));
   min-height: 100vh;
   height: 100%;
+  color: black;
 }
 
 body::-webkit-scrollbar {

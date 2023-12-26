@@ -16,7 +16,7 @@ export default function SelectComponent({
       >
         {options && options.length ? (
           options.map((optionItem) => (
-            <option
+            <option className=""
               id={optionItem.id}
               value={optionItem.id}
               key={optionItem.id}

@@ -69,13 +69,13 @@ export default function ProductButton({ item }) {
           setCurrentUpdatedProduct(item);
           router.push("/admin-view/add-product");
         }}
-        className="mt-1.5 flex w-full justify-center bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+        className="mt-1.5 flex w-full justify-center bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white rounded-md"
       >
         Update
       </button>
       <button
         onClick={() => handleDeleteProduct(item)}
-        className="mt-1.5 flex w-full justify-center bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+        className="mt-1.5 flex w-full justify-center bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white rounded-md"
       >
         {componentLevelLoader &&
         componentLevelLoader.loading &&
@@ -94,7 +94,7 @@ export default function ProductButton({ item }) {
     <>
       <button
         onClick={() => handleAddToCart(item)}
-        className="mt-1.5 flex w-full justify-center bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+        className="mt-1.5 flex w-full justify-center bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white rounded-md"
       >
         {componentLevelLoader &&
         componentLevelLoader.loading &&
