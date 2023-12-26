@@ -198,7 +198,7 @@ export const firebaseConfig = {
   measurementId: "G-VZQB4D541H",
 };
 
-export const firebaseStroageURL = "gs://oasis-ecom.appspot.com/";
+export const firebaseStroageURL = 'gs://oasis-ecom.appspot.com/';
 
 export const addNewAddressFormControls = [
   {
