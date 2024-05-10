@@ -16,7 +16,7 @@ export default function OrderDetails() {
   } = useContext(GlobalContext);
 
   const params = useParams();
-  const router = useRouter()
+  const router = useRouter();
 
   async function extractOrderDetails() {
     setPageLevelLoader(true);
@@ -147,16 +147,16 @@ export default function OrderDetails() {
               <div className="flex justify-center md:justify-start items-center md:items-start flex-col space-y-4 xl:mt-8">
                 <p className="font-bold text-2xl">Shipping Address</p>
                 <p>
-                  Address :{" "}
+                  Address :
                   {orderDetails && orderDetails.shippingAddress.address}
                 </p>
                 <p>City :{orderDetails && orderDetails.shippingAddress.city}</p>
                 <p>
-                  Country :{" "}
+                  Country :
                   {orderDetails && orderDetails.shippingAddress.country}
                 </p>
                 <p>
-                  Postal Code :{" "}
+                  Postal Code :
                   {orderDetails && orderDetails.shippingAddress.postalCode}
                 </p>
               </div>
