@@ -76,44 +76,44 @@ export default function AdminView() {
           <div className="px-4 py-6 sm:px-8 sm:py-10">
             <div className="flow-root">
               {allOrdersForAllUsers && allOrdersForAllUsers.length ? (
-                <ul className="flex flex-col gap-4">
+                <ul className="grid md:flex flex-col gap-4 ">
                   {allOrdersForAllUsers.map((item) => (
                     <li
                       key={item._id}
-                      className="bg-gray-200 shadow p-5 flex flex-col space-y-3 py-6 text-left"
+                      className="bg-gray-200 shadow-lg p-5 flex flex-col space-y-3 py-6 text-left rounded-md "
                     >
-                      <div className="flex">
+                      <div className="grid gap-2 mb-2 md:flex">
                         <h1 className="font-bold text-lg mb-3 flex-1">
                           #order: {item._id}
                         </h1>
-                        <div className="flex flex-col gap-2">
+                        <div className="grid md:flex flex-col gap-2">
                           <div className="flex items-center">
-                            <p className="mr-3 text-sm font-medium text-gray-900">
+                            <p className="mr-3 text-sm md:text-base font-medium text-gray-900">
                               User Name :
                             </p>
-                            <p className="text-sm  font-semibold text-gray-900">
+                            <p className="text-sm md:text-base  font-semibold text-gray-900">
                               {item?.user?.name}
                             </p>
                           </div>
                           <div className="flex items-center">
-                            <p className="mr-3 text-sm font-medium text-gray-900">
+                            <p className="mr-3 text-sm md:text-base font-medium text-gray-900">
                               User Email :
                             </p>
-                            <p className="text-sm  font-semibold text-gray-900">
+                            <p className="text-sm md:text-base  font-semibold text-gray-900">
                               {item?.user?.email}
                             </p>
                           </div>
                           <div className="flex items-center">
-                            <p className="mr-3 text-sm font-medium text-gray-900">
+                            <p className="mr-3 text-sm md:text-base font-medium text-gray-900">
                               Total Paid Amount :
                             </p>
-                            <p className="text-sm  font-semibold text-gray-900">
+                            <p className="text-sm md:text-base  font-semibold text-gray-900">
                               ${item?.totalPrice}
                             </p>
                           </div>
                         </div>
                       </div>
-                      <div className="flex gap-2">
+                      <div className="grid md:flex gap-2">
                         {item.orderItems.map((orderItem, index) => (
                           <div key={index} className="shrink-0">
                             <img
@@ -128,16 +128,16 @@ export default function AdminView() {
                           </div>
                         ))}
                       </div>
-                      <div className="flex gap-5">
-                        <button className="disabled:opacity-50 mt-5 mr-5  inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide">
+                      <div className="grid md:flex gap-5 md:gap-2">
+                        <p className="disabled:opacity-50 mt-5 mr-5 inline-block text-black px-5 py-3 text-md font-medium tracking-wide">
                           {item.isProcessing
-                            ? "Order is Processing"
-                            : "Order is delivered"}
-                        </button>
+                            ? "Order is Processing...."
+                            : "Order is delivered !"}
+                        </p>
                         <button
                           onClick={() => handleUpdateOrderStatus(item)}
                           disabled={!item.isProcessing}
-                          className="disabled:opacity-50 mt-5 mr-5  inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide"
+                          className="disabled:opacity-50 mt-5 mr-5  inline-block bg-black text-white px-5 py-3 text-xs font-medium rounded-md  tracking-wide"
                         >
                           {componentLevelLoader &&
                           componentLevelLoader.loading &&

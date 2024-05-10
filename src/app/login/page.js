@@ -127,6 +127,7 @@ export default function Login() {
                   >
                     Register
                   </button>
+                  <p>Are you an Admin. <span><a href="/admin_login">Login from here...</a></span></p>
                 </div>
               </div>
             </div>

@@ -58,6 +58,7 @@ async function helperForUPloadingImageToFirebase(file) {
 }
 
 const initialFormData = {
+  key:"",
   name: "",
   price: 0,
   description: "",
@@ -153,7 +154,7 @@ export default function AdminAddNewProduct() {
         <div className="w-full mt-6 mr-0 mb-0 ml-0 space-y-8">
           <input
             accept="image/*"
-            max="1000000"
+            max="100000000"
             type="file"
             onChange={handleImage}
           />
@@ -196,7 +197,7 @@ export default function AdminAddNewProduct() {
           )}
           <button
             onClick={handleAddProduct}
-            className="inline-flex w-full items-center justify-center bg-black px-6 py-4 text-lg text-white font-medium uppercase tracking-wide"
+            className="inline-flex w-fit items-center justify-center bg-black px-6 py-3 text-md lg:text-lg text-white font-medium rounded-md tracking-wide"
           >
             {componentLevelLoader && componentLevelLoader.loading ? (
               <ComponentLevelLoader
