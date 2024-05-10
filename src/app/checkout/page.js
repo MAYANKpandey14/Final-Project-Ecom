@@ -477,6 +477,10 @@ export default function Checkout() {
                 </p>
               )}
               <button
+              disabled={
+                (cartItems && cartItems.length === 0) ||
+                Object.keys(checkoutFormData.shippingAddress).length === 0
+              }
                 onClick={connectWallet}
                 className="flex disabled:opacity-50 mt-2 mr-5 w-fit text-center items-center gap-2 bg-black text-white px-5 py-3 text-md font-medium rounded-md tracking-wide"
               >
@@ -576,7 +580,10 @@ export default function Checkout() {
                 </svg>
               </button>
               <button
-                disabled={!defaultAccount || isOrderProcessing}
+              disabled={
+                (!defaultAccount || isOrderProcessing)||(cartItems && cartItems.length === 0) ||
+                Object.keys(checkoutFormData.shippingAddress).length === 0
+              }
                 onClick={handleCryptoCheckout}
                 className="flex disabled:opacity-50 mt-5 mr-5 w-fit text-center items-center gap-2 bg-black text-white px-5 py-3 text-md font-medium rounded-md tracking-wide"
               >
