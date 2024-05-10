@@ -2,21 +2,25 @@
 
 import { useRouter } from "next/navigation";
 import ComponentLevelLoader from "../Loader/componentlevel";
+// import QuantityIncrement from "../QuantityIncrement";
 
 export default function CommonCart({
   cartItems = [],
   handleDeleteCartItem,
   componentLevelLoader,
 }) {
+  // let newQuantity;
+  // function handleQuantityChange(newQuantity) {
+  //   console.log("New quantity:", newQuantity);
+  // }
 
-  const dynamicBottomMargin=(l)=>{
-    l=cartItems.length;
-    let m = l*50;
-    return m;
-  }
+  // const dynamicBottomMargin = (l) => {
+  //   l = cartItems.length;
+  //   let m = l * 50;
+  //   return m;
+  // };
 
-
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <section className=" bg-gray-100">
@@ -53,8 +57,11 @@ export default function CommonCart({
                               </p>
                             </div>
                             <div className="mt-4 flex gap-3 items-end justify-between sm:mt-0 sm:items-start sm:justify-end">
+                              {/* <QuantityIncrement
+                                onChange={handleQuantityChange}
+                              /> */}
                               <p className="shrink-0 w-20 text-base font-semibold text-gray-950 sm:order-1 sm:ml-8 sm:text-right">
-                                $
+                              $
                                 {cartItem &&
                                   cartItem.productID &&
                                   cartItem.productID.price}
@@ -95,7 +102,7 @@ export default function CommonCart({
                 <div className="flex items-center justify-between">
                   <p className="text-sm text-gray-400">Subtotal</p>
                   <p className="text-lg text-black font-semibold">
-                    $
+                  $
                     {cartItems && cartItems.length
                       ? cartItems.reduce(
                           (total, item) => item.productID.price + total,
@@ -111,7 +118,7 @@ export default function CommonCart({
                 <div className="flex items-center justify-between">
                   <p className="text-sm text-gray-400">Total</p>
                   <p className="text-lg text-black font-semibold">
-                    $
+                  $
                     {cartItems && cartItems.length
                       ? cartItems.reduce(
                           (total, item) => item.productID.price + total,
@@ -122,7 +129,7 @@ export default function CommonCart({
                 </div>
                 <div className="mt-5 grid place-items-center">
                   <button
-                  onClick={()=>router.push('/checkout')}
+                    onClick={() => router.push("/checkout")}
                     disabled={cartItems && cartItems.length === 0}
                     className="disabled:opacity-50 group flex w-fit items-center justify-center bg-black px-4 py-2 rounded-md text-md text-white font-medium tracking-wide hover:bg-white hover:text-black border-2 border-black ease-in-out duration-300"
                   >

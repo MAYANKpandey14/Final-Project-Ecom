@@ -61,23 +61,23 @@ export const registrationFormControls = [
     label: "Password",
     componentType: "input",
   },
-  {
-    id: "role",
-    type: "",
-    placeholder: "",
-    label: "Role",
-    componentType: "select",
-    options: [
-      {
-        id: "admin",
-        label: "Admin",
-      },
-      {
-        id: "customer",
-        label: "customer",
-      },
-    ],
-  },
+  // {
+  //   id: "role",
+  //   type: "",
+  //   placeholder: "",
+  //   label: "Role",
+  //   componentType: "select",
+  //   // options: [
+  //   //   {
+  //   //     id: "customer",
+  //   //     label: "Customer",
+  //   //   },
+  //   //   {
+  //   //     id: "admin",
+  //   //     label: "Admin",
+  //   //   },
+  //   // ],
+  // },
 ];
 
 export const loginFormControls = [

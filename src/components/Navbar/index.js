@@ -24,7 +24,7 @@ function NavItems({ isModalView = false, isAdminView, router }) {
         {isAdminView
           ? adminNavOptions.map((item) => (
               <li
-                className="cursor-pointer block py-2 pl-3 pr-4 text-gray-900 rounded md:p-0"
+                className="cursor-pointer px-4 py-2 text-sm md:text-base text-gray-900 hover:bg-gray-200 duration-200 ease-in-out rounded-md "
                 key={item.id}
                 onClick={() => router.push(item.path)}
               >
@@ -33,7 +33,7 @@ function NavItems({ isModalView = false, isAdminView, router }) {
             ))
           : navOptions.map((item) => (
               <li
-                className="cursor-pointer block py-2 pl-3 pr-4 text-gray-900 rounded md:p-0 hover:font-bold duration-300 ease-in-out"
+                className="cursor-pointer py-2 pl-3 pr-4 text-gray-900 rounded mrounded-md-bold duration-300 ease-in-out"
                 key={item.id}
                 onClick={() => router.push(item.path)}
               >
