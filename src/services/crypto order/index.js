@@ -29,7 +29,7 @@ export const verifyCryptoTransaction = async (txHash) => {
     try {
         const response = await fetch(url); // Wait for fetch to complete
         const data = await response.json(); // Wait for json conversion
-
+        console.log(data);
         // Now you can check the data and return true or false accordingly
         return data.status === '1' && data.message === "OK";
     } catch (error) {

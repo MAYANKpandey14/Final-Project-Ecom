@@ -79,7 +79,7 @@ export default function Checkout() {
       const transactionParameters = {
         to: "0x812F19c61A029407931f28d875527ee0b1a1D1E6", // Required except during contract publications.
         from: defaultAccount, // must match user's active address.
-        value: (totalPrice * 0.00032 * 1e18).toString(16), // the price in wei, in hexadecimal
+        value: (totalPrice * 0.00034 * 1e18).toString(16), // the price in wei, in hexadecimal
         gas: "0x76c0", // 30400 GWEI in hex customizable by user during MetaMask confirmation.
         gasPrice: "0x9184e72a000", // 10000000000000 GWEI in hex customizable by user during MetaMask confirmation.
       };
@@ -136,7 +136,6 @@ export default function Checkout() {
         if (orderResult.success) {
           setIsCryptoOrderProcessing(false);
           setCryptoOrderSuccess(true);
-          router.push("/orders");
         } else {
           throw new Error("Order creation failed");
         }
@@ -159,7 +158,6 @@ export default function Checkout() {
     }
     console.log("Account connected:", defaultAccount);
   }, [cryptoOrderSuccess]);
-
 
 
   // Stripe payment processing
@@ -269,7 +267,7 @@ export default function Checkout() {
 
     const createLineItems = cartItems.map((item) => ({
       price_data: {
-        currency: "inr",
+        currency: "usd",
         product_data: {
           images: [item.productID.imageUrl],
           name: item.productID.name,

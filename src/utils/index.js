@@ -97,6 +97,26 @@ export const loginFormControls = [
   },
 ];
 
+export const forgotFormControls =[
+  {
+    id: "email",
+    type: "email",
+    placeholder: "Enter your email",
+    label: "Email",
+    componentType: "input",
+  }
+]
+export const resetFormControls =[
+  {
+    id: "newPassword",
+    type: "password",
+    placeholder: "Enter your New Password",
+    label: "New password",
+    componentType: "input",
+  }
+  
+]
+
 export const adminAddProductformControls = [
   {
     id: "name",

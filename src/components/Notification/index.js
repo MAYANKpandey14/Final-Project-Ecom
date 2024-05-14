@@ -7,7 +7,7 @@ export default function Notification() {
       position="top-right"
       autoClose={4000}
       hideProgressBar={false}
-      newestOnTop={false}
+      newestOnTop={true}
       closeOnClick
       pauseOnFocusLoss
       draggable

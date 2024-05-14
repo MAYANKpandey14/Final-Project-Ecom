@@ -67,6 +67,7 @@ export default function Login() {
   }
 
   console.log(isAuthUser, user);
+  
 
   useEffect(() => {
     if (isAuthUser) router.push("/");
@@ -78,9 +79,7 @@ export default function Login() {
         <div className="flex flex-col justify-center items-center w-full pr-10 pl-10 lg:flex-row">
           <div className="w-full mt-10 mr-0 mb-0 ml-0 relative max-w-2xl lg:mt-0 lg:w-5/12">
             <div className="flex flex-col items-center justify-start pt-10 pr-10 pb-10 pl-10 bg-white shadow-2xl rounded-xl relative z-10">
-              <p className="w-full text-4xl text-center font-bold">
-                Login
-              </p>
+              <p className="w-full text-4xl text-center font-bold">Login</p>
               <div className="text-black w-full mt-6 mr-0 mb-0 ml-0 relative space-y-8">
                 {loginFormControls.map((controlItem) =>
                   controlItem.componentType === "input" ? (
@@ -118,7 +117,7 @@ export default function Login() {
                   )}
                 </button>
                 <div className="flex flex-col gap-2">
-                  <p>New to website ?</p>
+                  <p className="text-md font-semibold">New to website ?</p>
                   <button
                     className="inline-flex w-full items-center justify-center bg-black px-6 py-3 text-lg 
                      text-white transition-all duration-200 ease-in-out focus:shadow font-medium rounded-md tracking-wide
@@ -127,7 +126,9 @@ export default function Login() {
                   >
                     Register
                   </button>
-                  <p>Are you an Admin. <span><a href="/admin_login">Login from here...</a></span></p>
+                  {/* <button className="text-md font-semibold text-red-500" onClick={()=> router.push("/forgot")}>
+                    Forgot password
+                  </button> */}
                 </div>
               </div>
             </div>
