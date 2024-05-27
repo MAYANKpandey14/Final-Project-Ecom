@@ -5,6 +5,8 @@ const UserSchema = new mongoose.Schema({
   email: String,
   password: String,
   role: String,
+  resetToken: String,
+  resetTokenExpiry:Date,
 });
 
 const User = mongoose.models.User || mongoose.model("User", UserSchema);
